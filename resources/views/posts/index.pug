@@ -1,0 +1,40 @@
+extends ../layout 
+
+block content 
+  .container-lg
+    h1 Posts 
+
+    .card
+      img.card-img-top(src="https://media.wired.com/photos/598e35fb99d76447c4eb1f28/master/pass/phonepicutres-TA.jpg")
+      .card-body
+        h5.card-title Card title
+        p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+        a.btn.btn-primary(href="#") Go somewhere
+      
+    ul.list-unstyled 
+      li.mb-3
+        card
+          .row.g-0 
+            .col-4 
+              img.img-fluid.rounded-start(src="https://pressgazette.co.uk/wp-content/uploads/2020/11/shutterstock.jpg")
+            .col-8
+              .card-body 
+                h5.card-title Card title
+                p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                p.card-text 
+                  small.text-muted Last updated 3 mins ago
+      li.mb-3
+        card 
+          .row.g-0 
+            .col-4 
+              img.img-fluid.rounded-start(src="https://pressgazette.co.uk/wp-content/uploads/2020/11/shutterstock.jpg")
+            .col-8 
+              .card-body 
+                h5.card-title Card title
+                p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                p.card-text 
+                  small.text-muted Last updated 3 mins ago
+ 
+
+
+
