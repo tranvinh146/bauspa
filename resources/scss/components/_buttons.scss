@@ -1,13 +1,21 @@
 @use '../custom' as *;
 @use '../components/mixins' as *;
 
-.btn-rounded {
-  @include media-breakpoint-down(sm) {
-    display: none;
-  };
+.img-logo {
+  width: 5rem;
 
+  @include media-breakpoint-down(sm) {
+    width: 3.25rem;
+  }
+}
+
+.btn-rounded {
   position: relative;
-  padding: 0.9374rem 4.375rem 0.9375rem 1.25rem;
+  padding: 0.9375rem 4.25rem 0.9375rem 1.25rem;
+  @include media-breakpoint-down(sm) {
+    padding: 0.5rem 2.75rem 0.5rem 0.75rem;
+    font-size: 0.75rem;
+  }
   font-weight: 700;
   margin: 0;
   border: 0.1rem solid rgba($white, 0.6);
@@ -18,6 +26,10 @@
     background-color: $primary;
     width: 2.5rem;
     height: 2.5rem;
+    @include media-breakpoint-down(sm) {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
     top: 50%;
     right: 5px;
     transform: translateY(-50%);
@@ -27,6 +39,10 @@
       color: $white;
       font-size: 1rem;
       line-height: 2.5rem;
+      @include media-breakpoint-down(sm) {
+        line-height: 1.75rem;
+        font-size: 0.75rem;
+      }
     }
   }
 

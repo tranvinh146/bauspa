@@ -2,6 +2,7 @@
 @use '../components/mixins' as *;
 
 .menu {
+  font-family: 'Lora', serif;
   @include gradient;
 
   li {
@@ -10,7 +11,7 @@
     a {
       color: $white !important;
       text-transform: capitalize;
-      font-weight: 600;
+      font-size: 1.5rem;
     }
   }
 }
