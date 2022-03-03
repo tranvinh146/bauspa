@@ -1,31 +1,41 @@
 extends layout
 
 block content
-  .container-fluid.p-0.position-relative
-    picture 
-      img(
-        class="img-fluid"
-        src="https://tophinhanhdep.com/wp-content/uploads/2021/10/HD-Landscape-Wallpapers.jpg"
-      )
+  #home
+    .banner.container-fluid.p-0.position-relative
+      picture 
+        img(
+          class="img-fluid"
+          src="images/home/home-background.png"
+        )
 
-  #home.container-md.mt-5
-    .row.row-cols-2.row-cols-lg-4.g-4
-      .col.bg-primary.position-relative 
-        img.img-fluid(src="https://m.media-amazon.com/images/I/61-FIlRTY6L._AC_SY780_.jpg")
-        .container-info
-          .position-absolute.top-50.start-50.translate-middle.text-center
-            h4.bg-light Description
-            p.bg-light Some text
-      .col.bg-primary.position-relative 
-        img.img-fluid(src="https://m.media-amazon.com/images/I/61-FIlRTY6L._AC_SY780_.jpg")
-        .position-absolute.top-50.start-50.translate-middle
-          p Description
-      .col.bg-primary.position-relative 
-        img.img-fluid(src="https://m.media-amazon.com/images/I/61-FIlRTY6L._AC_SY780_.jpg")
-        .position-absolute.top-50.start-50.translate-middle
-          p Description
-      .col.bg-primary.position-relative 
-        img.img-fluid(src="https://m.media-amazon.com/images/I/61-FIlRTY6L._AC_SY780_.jpg")
-        .position-absolute.top-50.start-50.translate-middle
-          p Description
-    
+    .intro.container-md.mt-5
+      .row.row-cols-2.row-cols-lg-4.g-4
+        .col
+          .intro-box
+            img.img-fluid(src="images/home/mom.jpg")
+            .intro-info       
+              .caption       
+                h4 Description
+                p Some text
+        .col
+          .intro-box
+            img.img-fluid(src="images/home/baby.jpg")
+            .intro-info       
+              .caption       
+                h4 Description
+                p Some text
+        .col
+          .intro-box
+            img.img-fluid(src="images/home/pregnancy.jpg")
+            .intro-info       
+              .caption       
+                h4 Description
+                p Some text
+        .col
+          .intro-box
+            img.img-fluid(src="images/home/mom.jpg")
+            .intro-info       
+              .caption       
+                h4 Description
+                p Some text
