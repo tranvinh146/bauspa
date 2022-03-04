@@ -1,0 +1,51 @@
+extends ../layout 
+
+block css   
+  link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css")
+  link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css")
+
+block content 
+  - section=0
+  while section<4
+    - section++
+    if section%2==0
+      .container-lg.my-4.text-center 
+        h1 Service #{section}
+        .my-slick
+          - item=0
+          while item<13
+            - item++
+            div
+              .card.mx-4
+                //- - var imgSrc="images/about/gioi-thieu-"+section+"-"+item+".png" 
+                img.text-center(src="images/about/gioi-thieu-1-1.png" class="card-img-top" alt="..." style="width: 30%")
+                .card-body
+                  h5.card-title Card title #{item}
+    else 
+      .container-lg.my-4.text-center.bg-primary
+        h1 Service #{section}
+        .my-slick
+          - item=0
+          while item<13
+            - item++
+            div
+              .card.mx-4
+                //- - var imgSrc="images/about/gioi-thieu-"+section+"-"+item+".png" 
+                img.text-center(src="images/about/gioi-thieu-1-1.png" class="card-img-top" alt="..." style="width: 30%")
+                .card-body
+                  h5.card-title Card title #{item}  
+  
+
+block javascript 
+  script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js")
+
+  script(type="text/javascript"). 
+    $(document).ready(function(){
+      $('.my-slick').slick({
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        infinite: false,
+        arrows: true,
+        dots: false,
+      });
+    });

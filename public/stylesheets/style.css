@@ -11322,4 +11322,9 @@ textarea.form-control-lg {
   transition-property: all;
 }
 
+.my-slick .slick-arrow:before {
+  color: #80CEB9;
+  font-size: 30;
+}
+
 /*# sourceMappingURL=style.css.map */

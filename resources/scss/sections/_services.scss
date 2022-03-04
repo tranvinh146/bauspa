@@ -1,0 +1,9 @@
+@use '../custom' as *;
+
+.my-slick {
+  .slick-arrow:before {
+    color: $primary;
+    font-size: 30; 
+  }
+
+}

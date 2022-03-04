@@ -1,0 +1,23 @@
+extends layout
+
+block content 
+  - var section=0
+  while section < 2
+    - section++
+    .container-md.my-4 
+      h1.text-center Why choose us?
+      .row.g-5
+        - var item=0
+        while item < 6
+          - item++
+          .col-6.col-md-4
+            .card
+              - var imgSrc="images/about/gioi-thieu-"+section+"-"+item+".png" 
+              img.text-center(src=imgSrc class="card-img-top" alt="..." style="width: 30%")
+              .card-body
+                h5.card-title Card title #{item}
+                p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+        
+     
+      
+    

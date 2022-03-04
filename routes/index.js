@@ -1,14 +1,16 @@
-var express = require('express');
-var router = express.Router();
+const homeRoute = require('./home');
+const aboutRoute = require('./about');
+const servicesRoute = require('./services');
+const postsRoute = require('./posts');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Service' });
-});
+function route(app) {
+  app.use('/', homeRoute);
 
-/* GET anout us page. */
-router.get('/about-us', function(req, res, next) {
-  res.render('index', { title: 'Service' });
-});
+  app.use('/about-us', aboutRoute);
 
-module.exports = router;
+  app.use('/services', servicesRoute);
+
+  app.use('/posts', postsRoute);
+}
+
+module.exports = route;
