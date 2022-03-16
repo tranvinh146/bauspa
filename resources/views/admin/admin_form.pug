@@ -1,0 +1,38 @@
+extends ../layout 
+
+block content 
+  .container.mb-5.py-5
+    h1.text-center= title
+    form(method="POST" action="")
+      .mb-3 
+        label.form-label(for="name") Tên đăng nhập
+        input.form-control(
+          type="text" 
+          id="name" 
+          name="name" 
+          value=(undefined==name ? '' : name)
+        )
+        if errors && errors.name
+            .form-text.text-danger #{errors.name}
+      .mb-3 
+        label.form-label(for="password") Mật khẩu
+        input.form-control(
+          type="text" 
+          id="password" 
+          name="password" 
+          value=(undefined==password ? '' : password)
+        )
+        if errors && errors.password
+            .form-text.text-danger #{errors.password}
+      if form === 'Đăng kí'
+        .mb-3 
+          label.form-label(for="code") Mã xác thực
+          input.form-control(
+            type="text"
+            id="code" 
+            name="code"
+            value=(undefined==code ? '' : code)
+          )
+          if errors && errors.code
+              .form-text.text-danger #{errors.code}
+      button.btn.btn-primary(type="submit") #{form}

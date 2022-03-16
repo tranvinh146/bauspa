@@ -1,0 +1,63 @@
+extends ../layout 
+
+block preJS 
+  script(src="https://cdn.ckeditor.com/ckeditor5/33.0.0/classic/ckeditor.js")
+block content 
+  .container
+    h1= title
+
+    form(method="POST" enctype="multipart/form-data") 
+      .mb-3
+        label.form-label(for='name') Tên dịch vụ: 
+        input#name.form-control(
+          type='text'
+          name='name'
+          value=(undefined==service ? '' : service.name)
+          required
+        )
+        if errors && errors.name
+          p.text-danger #{errors.name}
+      .mb-3
+        label.form-label(for='image') Ảnh minh họa: 
+        input#image.form-control(
+          type='file'
+          accept='image/*'
+          name='image'
+          src='http://localhost:3000/images/services/be-tai-nha.jpg'
+          required
+        )
+        if errors && errors.image
+          p.text-danger #{errors.image}
+      .mb-3
+        label.form-label(for='detail') Giới thiệu dịch vụ: 
+        textarea#detail.form-control(
+          type='text'
+          name='detail'
+          value=(undefined==service ? '' : service.detail)
+        )
+      .mb-3
+        label Category: 
+        div
+          each category in category_list 
+            .form-check.form-check-inline
+              input.form-check-input(
+                type="checkbox" 
+                name='category'
+                id=category._id
+                value=category._id 
+                checked=category.checked
+              )
+              label.form-check-label(for=category._id) #{category.name}
+        if errors && errors.category
+          p.text-danger #{errors.category}
+      .mb-3 
+        button.btn.btn-primary(type='submit') Tạo 
+
+block javascript 
+  script(type="text/javascript"). 
+    ClassicEditor
+      .create( document.querySelector( '#detail' ) )
+      .catch( error => {
+          console.error( error );
+      } );
+  

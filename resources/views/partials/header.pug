@@ -1,6 +1,8 @@
-nav.navbar.navbar-expand-lg.sticky-top.shadow.navbar-light.menu
-  .container-lg
-    button.navbar-toggler(
+include ../components/dropdown.pug
+
+nav.navbar.navbar-expand-md.sticky-top.shadow.navbar-light.menu
+  .container-md
+    button.ms-2.navbar-toggler(
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#navbarHeader" 
@@ -10,27 +12,43 @@ nav.navbar.navbar-expand-lg.sticky-top.shadow.navbar-light.menu
     )
       span.navbar-toggler-icon
 
-    a.navbar-brand(href='/') 
-      img.img-logo(src='images/logo.png' alt='Logo')
+    .navbar-brand 
+      a(href='/')
+        img.img-logo(src='/images/logo_bauspa.png' alt='Logo Bầu Spa')
+      h1.d-none Bầu Spa
 
-    a.d-block.d-lg-none.text-decoration-none(href='tel:0389639908')
-      button.rounded-pill.btn-rounded 038 963 9908
-        span 
-          i.fas.fa-phone-alt
+    if name
+      .d-block.d-md-none
+        +dropdown
+        
+    else
+      .d-block.d-md-none(style='width: 3rem')
 
     #navbarHeader.collapse.navbar-collapse
-      ul.navbar-nav.mx-auto
-        li.nav-item
-          a.nav-link.active(aria-current="page" href="/about-us") Giới thiệu
-        li.nav-item
-          a.nav-link(href="/services") Dịch vụ
-        li.nav-item
-          a.nav-link(href="/posts") Bài viết
+      .d-flex.justify-content-between.align-items-start.mx-1.mx-md-auto
+        ul.navbar-nav
+          li.nav-item         
+            a.nav-link.active(aria-current="page" href="/") Trang chủ
+          li.nav-item
+            a.nav-link(href='about-us') Giới thiệu
+          li.nav-item
+            a.nav-link(href="/services") Dịch vụ
+          li.nav-item
+            a.nav-link(href="/posts") Bài viết 
+        
+        a.d-block.d-md-none.text-decoration-none(href='tel:0389639908') 
+          button.rounded-pill.btn-rounded 038 963 9908
+            span 
+              i.fas.fa-phone-alt
     
-    a.d-none.d-lg-block.text-decoration-none(href='tel:0389639908') 
-      button.rounded-pill.btn-rounded 038 963 9908
-        span 
-          i.fas.fa-phone-alt
+    if name
+      .d-none.d-md-block
+        +dropdown
+    else
+      a.d-none.d-md-block.text-decoration-none(href='tel:0389639908') 
+        button.rounded-pill.btn-rounded 038 963 9908
+          span 
+            i.fas.fa-phone-alt
 
     
 

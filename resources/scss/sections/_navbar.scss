@@ -7,11 +7,21 @@
 
   li {
     padding: 0 0.7rem;
+    @include media-breakpoint-down(lg) {
+      padding: 0 0.2rem;
+    }
 
     a {
       color: $white !important;
       text-transform: capitalize;
       font-size: 1.5rem;
+
+      @include media-breakpoint-down(lg) {
+        font-size: 1.25rem;
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: 1rem;
+      }
     }
   }
 }
