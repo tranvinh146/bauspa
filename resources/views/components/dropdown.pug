@@ -5,7 +5,11 @@ mixin dropdown
       id="adminBtn" 
       data-bs-toggle="dropdown" 
       aria-expanded="false"
-    ) #{name}
+    ) #{adminName}
     ul.dropdown-menu.dropdown-menu-end.dropdown-menu-dark(aria-labelledby="adminBtn")
       li 
-        a.dropdown-item(href='/admin/logout') Logout
+        a.dropdown-item(href='/services/service') Dịch vụ mới
+      li
+        hr.dropdown-divider
+      li 
+        a.dropdown-item(href='/admin/logout') Đăng xuất

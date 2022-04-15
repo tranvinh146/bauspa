@@ -17,7 +17,7 @@ nav.navbar.navbar-expand-md.sticky-top.shadow.navbar-light.menu
         img.img-logo(src='/images/logo_bauspa.png' alt='Logo Bầu Spa')
       h1.d-none Bầu Spa
 
-    if name
+    if adminName && authorized
       .d-block.d-md-none
         +dropdown
         
@@ -41,7 +41,7 @@ nav.navbar.navbar-expand-md.sticky-top.shadow.navbar-light.menu
             span 
               i.fas.fa-phone-alt
     
-    if name
+    if adminName && authorized
       .d-none.d-md-block
         +dropdown
     else

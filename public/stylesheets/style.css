@@ -11255,26 +11255,26 @@ textarea.form-control-lg {
   font-family: "Lora", serif;
   background: linear-gradient(to right, rgba(128, 206, 185, 0.85), rgba(128, 206, 185, 0.85));
 }
-.menu li {
+.menu .nav-item {
   padding: 0 0.7rem;
 }
 @media (max-width: 991.98px) {
-  .menu li {
+  .menu .nav-item {
     padding: 0 0.2rem;
   }
 }
-.menu li a {
+.menu .nav-item a {
   color: #fff !important;
   text-transform: capitalize;
   font-size: 1.5rem;
 }
 @media (max-width: 991.98px) {
-  .menu li a {
+  .menu .nav-item a {
     font-size: 1.25rem;
   }
 }
 @media (max-width: 575.98px) {
-  .menu li a {
+  .menu .nav-item a {
     font-size: 1rem;
   }
 }

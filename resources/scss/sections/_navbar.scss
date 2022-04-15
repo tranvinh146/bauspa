@@ -5,7 +5,7 @@
   font-family: 'Lora', serif;
   @include gradient;
 
-  li {
+ .nav-item {
     padding: 0 0.7rem;
     @include media-breakpoint-down(lg) {
       padding: 0 0.2rem;

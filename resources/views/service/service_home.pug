@@ -5,21 +5,25 @@ block css
   link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css")
 
 block content 
+  
   each category in category_list
     .container-lg.my-4
-      h1.text-center   Dịch vụ cho #{category.name} 
-      .my-slick
-        each service in service_list
-          if service.category.toString() === category._id.toString()
-            .container.px-md-2.px-1.text-center
-              .service-box
-                .service-box__img
-                  img.img-fluid(
-                    src=service.imgUrl 
-                    alt=service.name
-                  )
-                .service-box__title
-                  h3 #{service.name}
+      h1.text-center.my-4 Dịch vụ cho #{category.name} 
+      .container.mb-4.pb-4
+        .my-slick
+          each service in service_list
+            if service.category.includes(category._id)
+              a(href=service.url style='text-decoration: none')
+                .container.px-md-4.text-center
+                  .service-box
+                    .service-box__img
+                      img.img-fluid(
+                        src=service.imgUrl 
+                        alt=service.name
+                      )
+                    .service-box__title
+                      h3 #{service.name}
+
       
    
 
@@ -29,8 +33,8 @@ block javascript
   script(type="text/javascript"). 
     $(document).ready(function(){
       $('.my-slick').slick({
-        slidesToShow: 5,
-        slidesToScroll: 5,
+        slidesToShow: 4,
+        slidesToScroll: 4,
         infinite: false,
         arrows: true,
         dots: false,
