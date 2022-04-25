@@ -2,6 +2,7 @@
 $green-custom:  #80CEB9;
 $blue-custom:  #41AAC4;
 $brown-custom:    #BDB69C;
+$yellow-custom: #d8d4cd;
 
 // WHITE AND GRAY COLORS
 $white:    #fff;
@@ -16,11 +17,11 @@ $gray-800: #343a40;
 $gray-900: #212529;
 $black:    #000;
 
-$primary:   $green-custom;
+$primary:   $yellow-custom;
 $secondary: $blue-custom;
 
 // NAVBAR TOGGLE
-$navbar-toggler-font-size:          .75rem;
+// $navbar-toggler-font-size:          .75rem;
 $navbar-toggler-padding-y:          .25rem;
 $navbar-toggler-padding-x:          .425rem;
 // <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">

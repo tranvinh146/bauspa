@@ -47,6 +47,18 @@
 // STYLE THE INFO
 .footer-info {
   background-color: $primary;
+  
+  &__contact {
+    a {
+      text-decoration: none;
+      color: $black !important;
+
+      i {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
   &__fanpage {
     overflow: hidden;
   }

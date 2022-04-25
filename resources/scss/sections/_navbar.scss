@@ -4,23 +4,33 @@
 .menu {
   font-family: 'Lora', serif;
   @include gradient;
-
- .nav-item {
+  
+  .nav-item {
     padding: 0 0.7rem;
-    @include media-breakpoint-down(lg) {
-      padding: 0 0.2rem;
+    @include media-breakpoint-down(xl) {
+      padding: 0;
     }
-
+    
     a {
-      color: $white !important;
+      color: $black !important;
       text-transform: capitalize;
       font-size: 1.5rem;
 
-      @include media-breakpoint-down(lg) {
-        font-size: 1.25rem;
-      }
       @include media-breakpoint-down(sm) {
         font-size: 1rem;
+      }
+    }
+  }
+
+  .contact {
+    a {
+      font-size: 1.25rem;
+      margin-right: 0.7rem;
+      color: $gray-700;
+
+      &:last-child {
+        border-left: 2px solid black;
+        padding-left: 1rem;
       }
     }
   }

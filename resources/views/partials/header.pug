@@ -1,8 +1,63 @@
 include ../components/dropdown.pug
 
-nav.navbar.navbar-expand-md.sticky-top.shadow.navbar-light.menu
-  .container-md
-    button.ms-2.navbar-toggler(
+//- nav.navbar.navbar-expand-md.sticky-top.shadow.navbar-light.menu
+//-   .container-md
+//-     button.ms-2.navbar-toggler(
+//-       type="button"
+//-       data-bs-toggle="collapse"
+//-       data-bs-target="#navbarHeader" 
+//-       aria-controls="navbarHeader" 
+//-       aria-expanded="false" 
+//-       aria-label="Toggle navigation"
+//-     )
+//-       span.navbar-toggler-icon
+
+//-     .navbar-brand 
+//-       a(href='/')
+//-         img.img-logo(src='/images/logo_bauspa.png' alt='Logo Bầu Spa')
+//-       h1.d-none Bầu Spa
+
+//-     if adminName && authorized
+//-       .d-block.d-md-none
+//-         +dropdown
+        
+//-     else
+//-       .d-block.d-md-none(style='width: 3rem')
+
+//-     #navbarHeader.collapse.navbar-collapse
+//-       .d-flex.justify-content-between.align-items-start.mx-1.mx-md-auto
+//-         ul.navbar-nav
+//-           li.nav-item         
+//-             a.nav-link.active(aria-current="page" href="/") Trang chủ
+//-           li.nav-item
+//-             a.nav-link(href='about-us') Giới thiệu
+//-           li.nav-item
+//-             a.nav-link(href="/services") Dịch vụ
+//-           li.nav-item
+//-             a.nav-link(href="/posts") Bài viết 
+        
+//-         a.d-block.d-md-none.text-decoration-none(href='tel:0389639908') 
+//-           button.rounded-pill.btn-rounded 038 963 9908
+//-             span 
+//-               i.fas.fa-phone-alt
+    
+//-     if adminName && authorized
+//-       .d-none.d-md-block
+//-         +dropdown
+//-     else
+//-       a.d-none.d-md-block.text-decoration-none(href='tel:0389639908') 
+//-         button.rounded-pill.btn-rounded 038 963 9908
+//-           span 
+//-             i.fas.fa-phone-alt
+
+
+nav.navbar.navbar-expand-lg.sticky-top.navbar-light.menu
+  .container-fluid.px-5
+    .navbar-brand 
+      a(href='/')
+        img.img-logo(src='/images/logo_bauspa.png' alt='Logo Bầu Spa')
+
+    button.navbar-toggler(
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#navbarHeader" 
@@ -11,45 +66,32 @@ nav.navbar.navbar-expand-md.sticky-top.shadow.navbar-light.menu
       aria-label="Toggle navigation"
     )
       span.navbar-toggler-icon
-
-    .navbar-brand 
-      a(href='/')
-        img.img-logo(src='/images/logo_bauspa.png' alt='Logo Bầu Spa')
-      h1.d-none Bầu Spa
-
-    if adminName && authorized
-      .d-block.d-md-none
-        +dropdown
-        
-    else
-      .d-block.d-md-none(style='width: 3rem')
-
-    #navbarHeader.collapse.navbar-collapse
-      .d-flex.justify-content-between.align-items-start.mx-1.mx-md-auto
-        ul.navbar-nav
-          li.nav-item         
-            a.nav-link.active(aria-current="page" href="/") Trang chủ
-          li.nav-item
-            a.nav-link(href='about-us') Giới thiệu
-          li.nav-item
-            a.nav-link(href="/services") Dịch vụ
-          li.nav-item
-            a.nav-link(href="/posts") Bài viết 
-        
-        a.d-block.d-md-none.text-decoration-none(href='tel:0389639908') 
-          button.rounded-pill.btn-rounded 038 963 9908
-            span 
-              i.fas.fa-phone-alt
     
-    if adminName && authorized
-      .d-none.d-md-block
-        +dropdown
-    else
-      a.d-none.d-md-block.text-decoration-none(href='tel:0389639908') 
-        button.rounded-pill.btn-rounded 038 963 9908
-          span 
-            i.fas.fa-phone-alt
+    #navbarHeader.collapse.navbar-collapse
+      ul.navbar-nav.me-auto.mb-2.mb-lg-0
+        li.nav-item         
+          a.nav-link.active(aria-current="page" href="/") Trang chủ
+        li.nav-item
+          a.nav-link(href='about-us') Giới thiệu
+        li.nav-item
+          a.nav-link(href="/services") Dịch vụ
+        li.nav-item
+          a.nav-link(href="/posts") Bài viết 
 
+      .contact.d-flex 
+        a
+          i.fa-brands.fa-facebook-square
+        a
+          i.fa-solid.fa-calendar-days
+        a
+          i.fa-solid.fa-comments
+        a
+          i.fa-solid.fa-phone
+        a.text-decoration-none(href='tel:0389639908') 038 963 9908
+
+      //- <form class="d-flex">
+      //-   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      //-   <button class="btn btn-outline-success" type="submit">Search
     
 
     

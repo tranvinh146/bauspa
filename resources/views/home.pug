@@ -1,37 +1,121 @@
 extends layout
 
+block metadata 
+  meta(name="description" content="Bầu Spa là dịch vụ giúp tái tạo năng lượng, lưu thông máu tốt và giữ làn da luôn mịn màng tươi trẻ, tinh thần sảng khoái rất có lợi cho cả mẹ và em bé")
+  meta(name="keywords" content="Bầu Spa, spa bầu, chăm sóc mẹ và bé, dịch vụ spa bầu")
+  meta(name="language" content="vietnamese")
+  meta(name="author" content="Bầu Spa")
+
 block content
   #home
-    .banner.container-fluid.p-0.position-relative
-      picture 
-        img(
-          class="img-fluid"
-          src="images/home/home-background.png"
-        )
+    section
+      //- .banner.container-fluid.p-0.position-relative
+      //-   picture 
+      //-     img(
+      //-       class="img-fluid"
+      //-       src="images/home/home-background.png"
+          )
+      #carouselBanner.carousel.slide(data-bs-ride="carousel")
+        .carousel-inner
+          .carousel-item.active(data-bs-interval="5000")
+            img(src="images/home/home-background.png" class="d-block w-100" alt="Spa mẹ bầu")
+          .carousel-item(data-bs-interval="3000")
+            img(src="images/home/banner-2.jpg" class="d-block w-100" alt="Bơi thủy liệu")
+          .carousel-item(data-bs-interval="3000")
+            img(src="images/home/banner-3.jpg" class="d-block w-100" alt="Tắm bé tại Spa")
+        button(class="carousel-control-prev" type="button" data-bs-target="#carouselBanner" data-bs-slide="prev")
+          span(class="carousel-control-prev-icon" aria-hidden="true")
+          span(class="visually-hidden") Previous
+        button(class="carousel-control-next" type="button" data-bs-target="#carouselBanner" data-bs-slide="next")
+          span(class="carousel-control-next-icon" aria-hidden="true")
+          span(class="visually-hidden") Next
 
-    .intro.container-md.mt-5
-      .row.row-cols-2.row-cols-lg-4.g-4
-        .col
-          .intro-box.shadow
-            img.img-fluid(src="images/home/mom.jpg")
-            .intro-info       
-              .caption       
-                h4 Chăm sóc mẹ bầu
-        .col
-          .intro-box.shadow
-            img.img-fluid(src="images/home/baby.jpg")
-            .intro-info       
-              .caption       
-                h4 Chăm sóc sau sinh
-        .col
-          .intro-box.shadow
-            img.img-fluid(src="images/home/pregnancy.jpg")
-            .intro-info       
-              .caption.p-0     
-                h4 Bơi thủy lực
-        .col
-          .intro-box.shadow
-            img.img-fluid(src="images/home/mom.jpg")
-            .intro-info       
-              .caption       
-                h4 Thông tắc tia sữa
+    section
+      .container-lg.my-5
+        .row
+          .col-12.col-md-8.text-center
+            h2 CHĂM SÓC CHO MẸ BẦU 
+            img.mb-4.d-md-none.border.rounded(src="images/home/mom-care.jpg" alt="Chăm sóc mẹ và bé" style="width: 40%")
+            p Sức khỏe cho mẹ bầu ảnh hưởng trực tiếp đến sự phát triển của thai nhi. Vì thế việc chăm sóc sức khỏe Mẹ bầu là rất quan trọng để quá trình mang thai và sinh nở được an toàn và dễ dàng
+            .d-flex.justify-content-evenly
+              .rounded.border.mb-3.shadow-sm.px-3
+                .d-flex.flex-column.justify-content-evenly.align-items-center
+                  img.py-2(src="images/home/pregnant_icon.png") 
+                  p Massage toàn thân 
+              .rounded.border.mb-3.shadow-sm.px-3
+                .d-flex.flex-column.justify-content-evenly.align-items-center
+                  img.py-2(src="images/home/stone_icon.jpg")
+                  p Massage đá nóng
+              .rounded.border.mb-3.shadow-sm.px-3
+                .d-flex.flex-column.justify-content-evenly.align-items-center
+                  img.py-2(src="images/home/foot_icon.jpg")
+                  p Massage bàn chân
+          .col-4.d-none.d-md-block
+            .text-center
+              img.rounded(src="images/home/mom-care.jpg" alt="Chăm sóc mẹ và bé" style="width: 60%")
+
+    section 
+      .container-lg.rounded.bg-primary.py-5.px-4 
+        .row
+          .col-12.col-sm-5
+            h3 Liên hệ ngay để được tư vấn
+            p Nhắn tin trực tiếp qua fanpage: 
+              a.text-success(href="#") Bầu Spa
+            p Hotline: 
+              a.text-success(href="#") 038 963 9908
+          .col-12.col-sm-7
+            form.row.g-3
+              .col-md-6
+                label(for="name" class="form-label") Họ Tên
+                input(type="text" class="form-control" id="name")
+              .col-md-6
+                label(for="phone" class="form-label") Số điện thoại
+                input(type="tel" class="form-control" id="phone")
+              .col-12
+                label(for="content" class="form-label") Thông tin cần tư vấn
+                textarea(rows="8" name="content" class="form-control" id="content") 
+              .col-12
+                button(type="submit" class="btn btn-success") Gửi 
+
+    section 
+      .container-lg.my-5
+        h2.text-center Cảm nhận của các mẹ
+        .row.text-center
+          .col-12.col-sm-4
+            img.border.rounded-circle(src="images/home/customer_1.jpg" style="width: 125px")
+            h5 Chị Xuân Trà
+            p Rất thích dịch vụ tắm bé mà Bầu Spa mang lại. Bé tắm xong về rất thất ăn ngủ rất ngon
+          .col-12.col-sm-4
+            img.border.rounded-circle(src="images/home/customer_2.jpg" style="width: 125px")
+            h5 Chị Ngọc Hiền
+            p Không gian spa thoải mái, mát mẻ, tạo cảm giác thư giãn, tư vấn rất nhiệt tình, bác sĩ có tay nghề cao. 
+          .col-12.col-sm-4
+            img.border.rounded-circle(src="images/home/customer_3.jpg" style="width: 125px")
+            h5 Chị Huỳnh Liên
+            p Lúc đầu mình cảm thấy spa có mùi gây chút khó chịu, nhưng nhân viên rất nhiệt tình thay đồi mùi phòng để mình cảm thấy thoải mái và thư giản hơn.
+    //- section.intro.container-md.mt-5
+    //-   .row.row-cols-2.row-cols-lg-4.g-4
+    //-     .col
+    //-       .intro-box.shadow
+    //-         img.img-fluid(src="images/home/mom.jpg")
+    //-         .intro-info       
+    //-           .caption       
+    //-             h4 Chăm sóc mẹ bầu
+    //-     .col
+    //-       .intro-box.shadow
+    //-         img.img-fluid(src="images/home/baby.jpg")
+    //-         .intro-info       
+    //-           .caption       
+    //-             h4 Chăm sóc sau sinh
+    //-     .col
+    //-       .intro-box.shadow
+    //-         img.img-fluid(src="images/home/pregnancy.jpg")
+    //-         .intro-info       
+    //-           .caption.p-0     
+    //-             h4 Bơi thủy lực
+    //-     .col
+    //-       .intro-box.shadow
+    //-         img.img-fluid(src="images/home/mom.jpg")
+    //-         .intro-info       
+    //-           .caption       
+    //-             h4 Thông tắc tia sữa
