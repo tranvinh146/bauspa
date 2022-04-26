@@ -1,5 +1,5 @@
 const homeRoute = require("./home");
-const aboutRoute = require("./about");
+const introRoute = require("./intro");
 const servicesRoute = require("./services");
 const postsRoute = require("./posts");
 const adminRoute = require("./admin");
@@ -10,7 +10,7 @@ function route(app) {
 
   app.use("/", homeRoute);
 
-  app.use("/about-us", aboutRoute);
+  app.use("/gioi-thieu", introRoute);
 
   app.use("/services", servicesRoute);
 

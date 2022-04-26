@@ -1,0 +1,32 @@
+extends layout
+
+block content 
+  
+  section
+    .container-md.my-4 
+      h1.text-center Vì sao nên sử dụng dịch vụ chăm sóc mẹ và bé chuyên nghiệp?
+      .row.py-4.g-5
+        each intro in introList1
+          .col-6.col-md-4
+            .card.h-100
+              - var imgSrc="images/about/" + intro.image
+              img.mt-3.mx-auto(src=imgSrc class="card-img-top" alt="..." style="width: 90px")
+              .card-body.text-center
+                p.card-text #{intro.content}
+
+  section
+    .container-md.my-4 
+      h2.text-center 6 lý do nên chọn Bầu Spa:
+      .row.py-4.g-5
+        each intro in introList2
+          .col-6.col-md-4
+            .card.h-100
+              - var imgSrc="images/about/" + intro.image
+              img.mt-3.mx-auto(src=imgSrc class="card-img-top" alt=intro.title style="width: 90px")
+              .card-body.text-center
+                h3.text-success.text-uppercase.card-title #{intro.title}
+                p.card-text #{intro.content}
+    
+     
+      
+    
