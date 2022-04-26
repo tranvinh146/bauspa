@@ -11282,6 +11282,13 @@ textarea.form-control-lg {
   border-left: 2px solid black;
   padding-left: 1rem;
 }
+@media (max-width: 575.98px) {
+  .menu .contact a:last-child {
+    display: block;
+    padding-left: 0;
+    border-left: none;
+  }
+}
 
 #home .intro-box {
   position: relative;

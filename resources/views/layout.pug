@@ -1,3 +1,5 @@
+include ./components/chatButton.pug
+
 doctype html
 html
   head
@@ -27,6 +29,7 @@ html
       gtag('config', 'UA-205839234-1');
     
   body
+    +chatButton
     header
       include partials/header 
     
