@@ -38,7 +38,7 @@ exports.service_home = function (req, res, next) {
       } // Error in API usage.
       // Successful, so render
       res.render("service/service_home", {
-        title: "Dịch vụ tại Bầu Spa",
+        title: "Dịch vụ chăm sóc mẹ và bé - Bầu Spa",
         service_list: results.services,
         category_list: results.categories,
       });
@@ -52,7 +52,7 @@ exports.service_detail = function (req, res, next) {
     if (err) return next(err);
     // Successful, so render detail
     res.status(200).render("service/service_detail", {
-      title: result.name,
+      title: result.name + " - Bầu Spa",
       service: result,
     });
   });

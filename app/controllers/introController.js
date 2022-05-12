@@ -36,8 +36,7 @@ exports.getIntro = async function (req, res, next) {
     const introList1 = await Intro.find({ order: { $lt: 7 } });
     const introList2 = await Intro.find({ order: { $gt: 6 } });
     res.status(200).render("intro", {
-      title:
-        "Vì sao nên sử dụng dịch vụ chăm sóc mẹ và bé chuyên nghiệp? - Bầu Spa",
+      title: "Vì sao nên sử dụng dịch vụ chăm sóc mẹ và bé? - Bầu Spa",
       introList1,
       introList2,
     });

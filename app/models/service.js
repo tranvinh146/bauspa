@@ -28,7 +28,7 @@ ServiceSchema.virtual("imgUrl").get(function () {
 });
 
 ServiceSchema.virtual("url").get(function () {
-  return "/services/" + this.slug;
+  return "/dich-vu/" + this.slug;
 });
 
 ServiceSchema.pre("save", function (next) {

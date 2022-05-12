@@ -6,9 +6,9 @@ const servicesRoute = require("./services");
 function route(app) {
   app.use("/", homeRoute);
 
-  app.use("/gioi-thieu", introRoute);
+  app.use("/vi-sao-nen-su-dung-dich-vu-cham-soc-me-va-be", introRoute);
 
-  app.use("/services", servicesRoute);
+  app.use("/dich-vu", servicesRoute);
 
   // app.use("/posts", postsRoute);
 }
