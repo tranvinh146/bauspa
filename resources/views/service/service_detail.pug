@@ -1,6 +1,10 @@
 extends ../layout 
 
 block content 
+  .container.mx-4.mt-4
+    p.fs-5 
+      a(href="dich-vu") Dịch vụ
+      |  > #{service.name}
   .container.my-4
     h1.text-center #{service.name}
     .container 

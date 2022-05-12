@@ -18,11 +18,14 @@ block content
       #carouselBanner.carousel.slide(data-bs-ride="carousel")
         .carousel-inner
           .carousel-item.active(data-bs-interval="5000")
-            img(src="images/home/home-background.png" class="d-block w-100" alt="Spa mẹ bầu")
+            a(href="#tu-van-dich-vu")
+              img(src="images/home/home-background.png" class="d-block w-100" title="Tư vấn dịch vụ Bầu Spa" alt="dịch vụ Bầu Spa")
           .carousel-item(data-bs-interval="3000")
-            img(src="images/home/banner-2.jpg" class="d-block w-100" alt="Bơi thủy liệu")
+            a(href="dich-vu/boi-thuy-lieu")
+              img(src="images/home/banner-2.jpg" class="d-block w-100" title="Bơi thủy liệu cho bé" alt="Bơi thủy liệu cho bé")
           .carousel-item(data-bs-interval="3000")
-            img(src="images/home/banner-3.jpg" class="d-block w-100" alt="Tắm bé tại Spa")
+            a(href="dich-vu/cham-soc-tre-so-sinh-tai-nha")
+              img(src="images/home/banner-3.jpg" class="d-block w-100" title="Chăm sóc trẻ sơ sinh tại nhà" alt="Chăm sóc trẻ sơ sinh tại nhà")
         button(class="carousel-control-prev" type="button" data-bs-target="#carouselBanner" data-bs-slide="prev")
           span(class="carousel-control-prev-icon" aria-hidden="true")
           span(class="visually-hidden") Previous
@@ -35,34 +38,39 @@ block content
         .row
           .col-12.col-md-8.text-center
             h2 CHĂM SÓC CHO MẸ BẦU 
-            img.mb-4.d-md-none.border.rounded(src="images/home/mom-care.jpg" alt="Chăm sóc mẹ và bé" style="width: 40%")
+            a(href="dich-vu")
+              img.mb-4.d-md-none.border.rounded.shadow(src="images/home/mom-care.jpg" alt="Dịch vụ chăm sóc mẹ bầu" style="width: 40%")
             p Sức khỏe cho mẹ bầu ảnh hưởng trực tiếp đến sự phát triển của thai nhi. Vì thế việc chăm sóc sức khỏe Mẹ bầu là rất quan trọng để quá trình mang thai và sinh nở được an toàn và dễ dàng
             .d-flex.justify-content-evenly
               .rounded.border.mb-3.shadow-sm.px-3
                 .d-flex.flex-column.justify-content-evenly.align-items-center
-                  img.py-2(src="images/home/pregnant_icon.png") 
-                  p Massage toàn thân 
+                  a(href="dich-vu/massage-toan-than-thu-gian")
+                    img.py-2(src="images/home/pregnant_icon.png" alt="massage toàn thân thư giãn") 
+                    p Massage toàn thân 
               .rounded.border.mb-3.shadow-sm.px-3
                 .d-flex.flex-column.justify-content-evenly.align-items-center
-                  img.py-2(src="images/home/stone_icon.jpg")
-                  p Massage đá nóng
+                  a(href="dich-vu/massage-organic-da-nong")
+                    img.py-2(src="images/home/stone_icon.jpg" alt="massage organic đá nóng")
+                    p Massage đá nóng
               .rounded.border.mb-3.shadow-sm.px-3
                 .d-flex.flex-column.justify-content-evenly.align-items-center
-                  img.py-2(src="images/home/foot_icon.jpg")
-                  p Massage bàn chân
+                  a(href="dich-vu/massage-ban-chan-thu-gian")
+                    img.py-2(src="images/home/foot_icon.jpg" alt="massage bàn chân thư giãn")
+                    p Massage bàn chân
           .col-4.d-none.d-md-block
             .text-center
-              img.rounded(src="images/home/mom-care.jpg" alt="Chăm sóc mẹ và bé" style="width: 60%")
+              a(href="dich-vu")
+                img.rounded.shadow(src="images/home/mom-care.jpg" alt="Dịch vụ chăm sóc mẹ bầu" style="width: 80%")
 
-    section 
+    section#tu-van-dich-vu
       .container-lg.rounded.bg-primary.py-5.px-4 
         .row
           .col-12.col-sm-5
             h3 Liên hệ ngay để được tư vấn
             p Nhắn tin trực tiếp qua fanpage: 
-              a.text-success(href="#") Bầu Spa
+              a.text-success(href="https://www.facebook.com/bauspavn" target="_blank") Bầu Spa
             p Hotline: 
-              a.text-success(href="#") 038 963 9908
+              a.text-success(href="tel:0389639908") 038 963 9908
           .col-12.col-sm-7
             form.row.g-3
               .col-md-6
@@ -92,7 +100,7 @@ block content
           .col-12.col-sm-4
             img.border.rounded-circle(src="images/home/customer_3.jpg" style="width: 125px")
             h5 Chị Lương Ngọc Bích
-            p Địa chỉ tin cậy để bbes và mẹ trải nghiệm, vote 5 sao.
+            p Địa chỉ tin cậy để bé và mẹ trải nghiệm, vote 5 sao.
     //- section.intro.container-md.mt-5
     //-   .row.row-cols-2.row-cols-lg-4.g-4
     //-     .col

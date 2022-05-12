@@ -11251,6 +11251,14 @@ textarea.form-control-lg {
   height: 100%;
 }
 
+a {
+  color: #6c757d;
+  text-decoration: none;
+}
+a:hover {
+  color: #000;
+}
+
 .menu {
   font-family: "Lora", serif;
   background: linear-gradient(to right, rgba(216, 212, 205, 0.85), rgba(216, 212, 205, 0.85));
@@ -11368,7 +11376,7 @@ textarea.form-control-lg {
   height: 15rem;
   overflow: hidden;
   border-bottom: 1px #dee2e6 solid;
-  background-color: #dee2e6;
+  background-color: #f8f9fa;
 }
 @media (max-width: 991.98px) {
   .service-box__img {

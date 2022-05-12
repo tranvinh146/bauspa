@@ -19,7 +19,7 @@ block content
         .my-slick
           each service in service_list
             if service.category.includes(category._id)
-              a(href=service.url style='text-decoration: none')
+              a(href=service.url)
                 .container.px-md-4.text-center
                   .service-box
                     .service-box__img
