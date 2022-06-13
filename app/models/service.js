@@ -14,6 +14,11 @@ const ServiceSchema = new Schema({
     required: [true, "Vui lòng chọn ảnh dịch vụ"],
   },
   detail: { type: String },
+  description: {
+    type: String,
+    default:
+      "Bầu Spa được dẫn dắt bởi bác sĩ cùng đội ngũ 100% điều dưỡng, y sĩ cam kết chăm sóc cho mẹ và bé chuẩn y khoa. Đội ngũ nhân viên chăm sóc tận nhà cho mẹ ở cử và bé sơ sinh.",
+  },
   category: [
     {
       type: Schema.Types.ObjectId,

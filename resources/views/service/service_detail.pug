@@ -1,9 +1,16 @@
 extends ../layout 
 
+block metadata 
+  - var keywords = service.name + ", " + service.name + " bau spa, dich vu " + service.name;
+  meta(name="keywords" content=keywords)
+  meta(name="description" content=service.description)
+  meta(name="language" content="vietnamese")
+  meta(name="author" content="Bầu Spa")
+
 block content 
   .container.mx-4.mt-4
     p.fs-5 
-      a(href="dich-vu") Dịch vụ
+      a(href="/dich-vu") Dịch vụ
       |  > #{service.name}
   .container.my-4
     h1.text-center #{service.name}
